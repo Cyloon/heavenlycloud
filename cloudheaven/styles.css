@@ -6,7 +6,15 @@ img {
     margin: 0;
 }
 
-
+.bg-image {
+    margin-top: 0;
+     background-image: url("background.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center; /* Center the image */
+     height: 100vh;
+ }
+ 
 body {
     background: linear-gradient(to bottom, #3996c6 10%, #042d42 80%);
     font-family: 'Optima', sans-serif, 'Perpetua', serif;
@@ -26,15 +34,6 @@ body {
     text-align: center;
 }
 
-.bg-image {
-    margin-top: 0;
-    background-image: url("background.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    height: 100vh;
-}
-
 .animation-cloud-left-right {
     position: absolute;
     animation: linear infinite alternate;
@@ -51,8 +50,10 @@ body {
 }
 
 .animation-fade-in-title {
+    position: relative;
     animation-name: fade-in-title;
     animation-duration: 10s;
+    transition: ease-in-out;
 }
 
 @keyframes cloud-left-right {
@@ -66,6 +67,8 @@ body {
 }
 
 @keyframes fade-in-title {
-    0% {opacity: 0;}
+    0% {opacity: 0; transform: scale3d(0.3, 0.3, 0.3);}
     100% {opacity: 1;}
+
 }
+
