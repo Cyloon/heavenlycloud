@@ -28,6 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: aqua;
+    border: 2px solid blue;
 }
 
 .site-header__title {
@@ -38,12 +39,13 @@ body {
 .site-nav {
     background-color: salmon;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .site-nav__menu {
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -51,11 +53,10 @@ main {
     background-color: lightgrey;
     }
 
-footer {
-    width: 100%;
+.footer.wrapper {
     position: absolute;
     bottom: 0;
+}
+.footer {
     background-color: pink;
-    text-align: center;
-    padding: 1rem;
 }
