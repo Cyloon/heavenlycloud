@@ -53,8 +53,11 @@ main {
     background-color: lightgrey;
     }
 
-.footer.wrapper {
+.footer-wrapper {
     border: 2px solid purple;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 .footer {
     background-color: pink;
