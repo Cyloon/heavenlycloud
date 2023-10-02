@@ -20,6 +20,16 @@
     background-color: aquamarine;
 }
 
+nav {
+    background-color: salmon;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    display: inline-block;
+}
+
 main {
     background-color: lightgrey;
 }
