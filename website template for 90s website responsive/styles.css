@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 99vh;
-    width: 100%;
+    max-width: 60rem;
     border: 2px solid red;
 }
 
@@ -53,13 +53,10 @@ main {
     background-color: lightgrey;
     }
 
-.footer-wrapper {
-    border: 2px solid purple;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
 .footer {
+    display: flex;
+    justify-content: center;
     background-color: pink;
     text-align: center;
+    padding: 1rem;
 }
