@@ -9,13 +9,14 @@ img {
 
 .bg-image {
     background-image: url("background.png");
-    background-size: cover;
+    background-size: auto auto;
     background-repeat: no-repeat;
     background-position: top center; /* Center the image */
     height: 100vh;
  }
  
 body {
+    margin: 0;
     background: linear-gradient(to bottom, #3996c6 22%, #50b8d6 48%, #042d42 78%);
     font-family: 'Optima', sans-serif, 'Perpetua', serif;
     color: #042d42;
@@ -92,4 +93,14 @@ body {
     0% {opacity: 0; transform: scale3d(0.3, 0.3, 0.3);}
     100% {opacity: 1;}
 
+}
+
+@media only screen and (max-width: 600px) {
+    .bg-image {
+        background-image: url("background.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center; /* Center the image */
+        height: 100vh;
+  }
 }
