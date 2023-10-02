@@ -54,9 +54,9 @@ main {
     }
 
 .footer.wrapper {
-    position: absolute;
-    bottom: 0;
+    border: 2px solid purple;
 }
 .footer {
     background-color: pink;
+    text-align: center;
 }
