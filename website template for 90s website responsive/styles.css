@@ -21,6 +21,8 @@ body {
     flex-direction: column;
     min-height: 99vh;
     max-width: 60rem;
+    margin: 0 auto;
+
     border: 2px solid red;
 }
 
@@ -53,7 +55,13 @@ main {
     background-color: lightgrey;
     }
 
+.footer-wrapper {
+    position: absolute;
+    bottom: 0;
+}
+
 .footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: pink;
