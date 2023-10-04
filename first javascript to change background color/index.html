@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Backgroundchanger</title>
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="returncolor()">Submit</button>
+      <label for="userInput">Pick a color and change the background!</label>
+      <input type="color" id="userInput" />
+      
+    </div>
+    <script>
+      let input = localStorage.getItem("input");
+
+function returncolor() {
+  input = document.getElementById("userInput").value;
+  localStorage.setItem("input", input);
+  document.documentElement.style.setProperty("--my-variable-name", input);
+}
+    </script>
+  </body>
+</html>
