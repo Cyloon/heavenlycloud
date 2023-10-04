@@ -20,7 +20,7 @@
             
             <div 
                 class="site-buttons-container__items" 
-                onclick="change_justify_value(center)" 
+                onclick="change_justify_value('center')" 
                 style="cursor: pointer;"
                 >justify-content: center;
             </div>
@@ -28,7 +28,7 @@
             
             <div 
             class="site-buttons-container__items" 
-            onclick="change_justify_value(end)" 
+            onclick="change_justify_value('end')" 
             style="cursor: pointer;"
             >justify-content: end;
             </div>
@@ -51,7 +51,8 @@
     </div>
     <script>
         function change_justify_value(input) {
-        document.documentElement.style.setProperty("--jcvalue", input);
+            document.documentElement.style.setProperty("--jcvalue", input);
+            return input;
         }
     </script>    
 </body>
