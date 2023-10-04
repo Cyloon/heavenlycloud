@@ -23,7 +23,11 @@
     text-align: center;
 }
 
-.site-buttons {
+.site-buttons-container {
     display: flex;
     border: 1px solid blue;
+}
+
+.site-buttons-container__items {
+    font-size: 1rem;
 }
