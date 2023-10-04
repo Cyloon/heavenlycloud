@@ -8,6 +8,7 @@ img {
 
 :root {
     --jcvalue: center; /* var(--jcvalue) */
+    --jdvalue: row; /* var(--jdvalue) */
 }
 
 .wrapper {
@@ -32,6 +33,7 @@ img {
     background-color: black;
     color: white;
     justify-content: var(--jcvalue);
+    flex-direction: var(--jdvalue);
     gap: 0.2rem;
     border-radius: 5px;
     margin: 1rem;

@@ -24,25 +24,43 @@
                 style="cursor: pointer;"
                 >justify-content: center;
             </div>
-            
-            
             <div 
-            class="site-buttons-container__items" 
-            onclick="change_justify_value('end')" 
-            style="cursor: pointer;"
-            >justify-content: end;
+                class="site-buttons-container__items" 
+                onclick="change_justify_value('end')" 
+                style="cursor: pointer;"
+                >justify-content: end;
             </div>
-            
-
-
-
-
-            <div class="site-buttons-container__items">justify-content: space-between;</div>
-            <div class="site-buttons-container__items">justify-content: space-around;</div>
-            <div class="site-buttons-container__items">justify-content: space-evenly;</div>
+             <div 
+                class="site-buttons-container__items"
+                onclick="change_justify_value('space-between')"
+                style="cursor: pointer;"
+                >justify-content: space-between;
+            </div>
+            <div 
+                class="site-buttons-container__items"
+                onclick="change_justify_value('space-around')"
+                style="cursor: pointer;"
+                >justify-content: space-around;
+            </div>
+            <div 
+                class="site-buttons-container__items"
+                onclick="change_justify_value('space-evenly')"
+                style="cursor: pointer;"
+                >justify-content: space-evenly;
+            </div>
             <div class="site-buttons-container__items--direction">
-                <div class="site-buttons-container__items">flex-direction: row;</div>
-                <div class="site-buttons-container__items">flex-direction: column;</div>
+                <div 
+                    class="site-buttons-container__items"
+                    onclick="change_direction_value('row')"
+                    style="cursor: pointer;"
+                    >flex-direction: row;
+                </div>
+                <div 
+                    class="site-buttons-container__items"
+                    onclick="change_direction_value('column')"
+                    style="cursor: pointer;"
+                    >flex-direction: column;
+                </div>
             </div>
             
 
@@ -52,6 +70,10 @@
     <script>
         function change_justify_value(input) {
             document.documentElement.style.setProperty("--jcvalue", input);
+            return input;
+        }
+        function change_direction_value(input) {
+            document.documentElement.style.setProperty("--jdvalue", input);
             return input;
         }
     </script>    
