@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+}
+
+:root {
+    --jcvalue: center; /* var(--jcvalue) */
+}
 
 .wrapper {
     display: grid;
@@ -11,6 +18,8 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(241, 241, 241);
     color: rgb(83, 10, 173);
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .site-header {
@@ -22,7 +31,7 @@
     display: flex;
     background-color: black;
     color: white;
-    justify-content: center;
+    justify-content: var(--jcvalue);
     gap: 0.2rem;
     border-radius: 5px;
     margin: 1rem;
