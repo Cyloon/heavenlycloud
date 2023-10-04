@@ -17,8 +17,26 @@
             <div class="site-content-container__items">3</div>
         </div>
         <div class="site-buttons">
-            <div class="site-buttons-container__items">justify-content: center;</div>
-            <div class="site-buttons-container__items">justify-content: end;</div>
+            
+            <div 
+                class="site-buttons-container__items" 
+                onclick="change_justify_value(center)" 
+                style="cursor: pointer;"
+                >justify-content: center;
+            </div>
+            
+            
+            <div 
+            class="site-buttons-container__items" 
+            onclick="change_justify_value(end)" 
+            style="cursor: pointer;"
+            >justify-content: end;
+            </div>
+            
+
+
+
+
             <div class="site-buttons-container__items">justify-content: space-between;</div>
             <div class="site-buttons-container__items">justify-content: space-around;</div>
             <div class="site-buttons-container__items">justify-content: space-evenly;</div>
@@ -31,6 +49,10 @@
         </div>
         <img src="Screenshot_2023-10-04-09-05-23-575_com.instagram.android.jpg">
     </div>
-    
+    <script>
+        function change_justify_value(input) {
+        document.documentElement.style.setProperty("--jcvalue", input);
+        }
+    </script>    
 </body>
 </html>
