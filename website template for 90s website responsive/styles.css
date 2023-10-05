@@ -52,23 +52,27 @@ body {
 }
 
 .site-nav__item {
-    
     background-color: salmon;
     font-size: 2rem;
 }
 
-main {
-    background-color: lightgrey;
+.site-main__wrapper {
+    height: 70vh;
+    border: 2px solid orange;
     }
 
-.wrapper .footer-wrapper {
+.site-main__content {
+    background-color: bisque;
+    height: 100%;
+}
+
+.site-footer__wrapper {
     position: absolute;
     width: 100%;
     bottom: 0;
-    
 }
 
-.wrapper .footer-content {
+.site-footer__content {
     background-color: pink;
     text-align: center;
     padding: 1rem;
