@@ -20,7 +20,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 7fr 1fr;
-    max-height: 99vh;
+    min-height: 99vh;
     max-width: 60rem;
     margin: 0 auto;
     border: 2px solid red;
@@ -28,18 +28,14 @@ body {
 
 .site-header {
     background-color: aqua;
+    border: 2px solid blue;
 }
 
 .site-header__title {
     text-align: center;
     background-color: aquamarine;
-}
-
-.site-nav {
-    background-color: salmon;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 2px dashed blueviolet;
+    height: 50%;
 }
 
 .site-nav__menu {
