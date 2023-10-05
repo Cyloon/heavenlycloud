@@ -18,7 +18,9 @@ img {
   }
 
 body {
+    height: 100%;
     margin: 0 0;
+    min-width: 313px;
 }
 
 .wrapper {
@@ -80,6 +82,11 @@ body {
 
 .site-nav__item a {
     color: whitesmoke;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
 }
 
 .site-main {
