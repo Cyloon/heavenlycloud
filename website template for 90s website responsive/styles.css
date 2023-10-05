@@ -56,19 +56,13 @@ body {
     font-size: 2rem;
 }
 
-.site-main__wrapper {
+.site-main {
+    background-color: yellow;
     border: 2px solid orange;
-    }
-
-.site-main__content {
-    background-color: bisque;
+    text-align: center;
 }
 
-.site-footer__wrapper {
-    border: 2px solid green;
-}
-
-.site-footer__content {
+.site-footer {
     background-color: pink;
     text-align: center;
     padding: 1rem;
