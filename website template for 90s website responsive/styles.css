@@ -19,8 +19,8 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 7fr 1fr;
-    min-height: 99vh;
+    grid-template-rows: 2fr 7fr 1fr;
+    max-height: 99vh;
     max-width: 60rem;
     margin: 0 auto;
     border: 2px solid red;
