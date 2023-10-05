@@ -27,6 +27,8 @@ body {
 }
 
 .site-header__wrapper {
+    display: flex;
+    flex-direction: column;
     background-color: aqua;
     border: 2px solid blue;
 }
@@ -35,11 +37,9 @@ body {
     text-align: center;
     background-color: aquamarine;
     border: 2px dashed blueviolet;
-    height: 50%;
 }
 
 .site-nav {
-    height: 50%;
     background-color: salmon;
     border: 2px solid black;
 }
