@@ -27,8 +27,6 @@ body {
 }
 
 .site-header {
-    display: flex;
-    flex-direction: column;
     background-color: aqua;
 }
 
@@ -47,7 +45,6 @@ body {
 .site-nav__menu {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
     gap: 1rem;
 }
 
@@ -57,19 +54,15 @@ body {
 }
 
 .site-main__wrapper {
-    height: 70vh;
     border: 2px solid orange;
     }
 
 .site-main__content {
     background-color: bisque;
-    height: 100%;
 }
 
 .site-footer__wrapper {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    border: 2px solid green;
 }
 
 .site-footer__content {
