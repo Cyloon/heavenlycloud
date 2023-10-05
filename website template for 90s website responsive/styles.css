@@ -24,41 +24,43 @@ body {
     max-height: 99vh;
     max-width: 60rem;
     margin: 0 auto;
-    border: 2px solid red;
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 .site-header__wrapper {
     display: flex;
     flex-direction: column;
     background-color: aqua;
-    border: 2px solid blue;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .site-header__title {
     text-align: center;
-    background-color: aquamarine;
-    border: 2px dashed blueviolet;
 }
 
 .site-nav {
     background-color: salmon;
-    border: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .site-nav__menu {
     display: flex;
     justify-content: space-evenly;
-    border: 2px dashed wheat;
 }
 
 .site-nav__item {
-    background-color: rgb(168, 42, 28);
     font-size: 2rem;
+}
+
+.site-nav__item a {
+    color: whitesmoke;
 }
 
 .site-main {
     background-color: yellow;
-    border: 2px solid orange;
     text-align: center;
 }
 
@@ -66,4 +68,6 @@ body {
     background-color: pink;
     text-align: center;
     padding: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
