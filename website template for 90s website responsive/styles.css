@@ -26,7 +26,7 @@ body {
     border: 2px solid red;
 }
 
-.site-header {
+.site-header__wrapper {
     background-color: aqua;
     border: 2px solid blue;
 }
@@ -41,9 +41,7 @@ body {
 .site-nav {
     height: 50%;
     background-color: salmon;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 2px solid black;
 }
 
 .site-nav__menu {
@@ -53,7 +51,7 @@ body {
 }
 
 .site-nav__item {
-    background-color: salmon;
+    background-color: rgb(168, 42, 28);
     font-size: 2rem;
 }
 
