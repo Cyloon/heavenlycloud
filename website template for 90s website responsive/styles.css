@@ -38,6 +38,14 @@ body {
     height: 50%;
 }
 
+.site-nav {
+    height: 50%;
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .site-nav__menu {
     display: flex;
     justify-content: space-evenly;
