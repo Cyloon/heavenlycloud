@@ -5,6 +5,7 @@
 ul,
 li {
   list-style: none;
+  padding-left: 0;
 }
 
 a {
@@ -52,11 +53,29 @@ body {
 
 .site-nav__menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .site-nav__item {
-    font-size: 2rem;
+    background-color: darkgray;
+    font-size: 1.3rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 515px) {
+    .site-nav__item {
+        font-size: 2rem;
+    }
+    
+}
+.site-nav__item:hover {
+    background-color: lightblue;
+}
+
+.site-nav__item:active a {
+    color: blueviolet;
 }
 
 .site-nav__item a {
@@ -65,7 +84,6 @@ body {
 
 .site-main {
     background-color: yellow;
-    text-align: center;
 }
 
 .site-footer {
