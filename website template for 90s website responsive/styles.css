@@ -17,9 +17,9 @@ body {
 }
 
 .wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 7fr 1fr;
     min-height: 99vh;
     max-width: 60rem;
     margin: 0 auto;
