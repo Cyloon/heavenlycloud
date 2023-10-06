@@ -39,7 +39,7 @@ body {
     .wrapper {
         display: grid;
         grid-template:
-        header-title header-title 
+        header header 
         nav main
         footer footer;
         min-height: 99vh;
