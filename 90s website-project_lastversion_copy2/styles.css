@@ -35,6 +35,16 @@ body {
     border-radius: 20px;
 }
 
+@media screen and (min-width: 1024px){
+    .wrapper {
+        display: grid;
+        grid-template-columns: 5rem 1fr ;
+        grid-template-rows: 1fr 8fr 0.5fr;
+    }
+    
+}
+
+
 .site-header__wrapper {
     display: flex;
     flex-direction: column;
@@ -45,12 +55,14 @@ body {
 
 .site-header__title {
     text-align: center;
+    grid-area: header-title;
 }
 
 .site-nav {
     background-color: salmon;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    grid-area: nav;
 }
 
 .site-nav__menu {
@@ -99,6 +111,7 @@ iframe {
 
 .site-main {
     background-color: yellow;
+    grid-area: main;
 }
 
 .site-footer {
@@ -108,4 +121,5 @@ iframe {
     border-top: 2px solid black;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    grid-area: footer;
 }
