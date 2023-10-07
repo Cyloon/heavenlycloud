@@ -24,6 +24,10 @@
         gap: 1rem;
     }
 
+    .site-nav__item {
+        text-align: left;
+    }
+
     .site-main {
         grid-area: site-main;
         border-radius: 20px;
@@ -33,6 +37,7 @@
     iframe {
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
+        padding: 1rem;
     }
 
     .site-footer {

@@ -68,9 +68,11 @@ body {
 .site-nav__item {
     background-color: darkgray;
     font-size: 1.3rem;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-radius: 10px;
     padding: 0.3rem;
+    width: 9.5rem;
+    text-align: center;
 }
 
 .site-nav__item:hover {
