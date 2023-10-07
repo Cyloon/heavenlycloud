@@ -26,6 +26,7 @@
 
     .site-nav__item {
         text-align: left;
+        width: 9.5rem;
     }
 
     .site-main {
@@ -46,13 +47,21 @@
     }
 }
 
-@media screen and (min-width: 515px) {
+@media screen and (min-width: 343px) {
+    .site-nav__item {
+        padding: 0.3rem ;
+    }
+    
+}
+
+
+@media screen and (min-width: 520px) {
     .site-nav__item {
         font-size: 2rem;
     }
 }
 
-@media screen and (max-width: 337px) {
+@media screen and (max-width: 380px) {
     .site-nav__item {
         padding: 0;
     }
