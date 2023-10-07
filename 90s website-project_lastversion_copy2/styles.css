@@ -1,4 +1,10 @@
 
+
+:root {
+    --main-bg-color: rgb(49, 144, 217); /* var(--main-bg-color) */
+
+}
+
 * {
     box-sizing: border-box;
 }
@@ -19,6 +25,7 @@ img {
   }
 
 body {
+    background-color: var(--main-bg-color);
     height: 100%;
     margin: 0 0;
     min-width: 313px;
@@ -40,13 +47,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: var(--main-bg-color);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
 
 .site-nav {
-    background-color: salmon;
+    background-color: var(--main-bg-color);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -83,15 +90,15 @@ iframe {
 }
 
 .site-main {
-    background-color: yellow;
+    background-color: var(--main-bg-color);
 }
 
 .site-aside {
-    background-color: bisque;
+    background-color: var(--main-bg-color);
 }
 
 .site-footer {
-    background-color: pink;
+    background-color: var(--main-bg-color);
     text-align: center;
     padding: 1rem;
     border-top: 2px solid black;
