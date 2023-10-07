@@ -27,7 +27,7 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 8fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 8fr 0px 0.5fr;
     min-height: 99vh;
     max-height: 99vh;
     max-width: 1024px;
@@ -84,6 +84,10 @@ iframe {
 
 .site-main {
     background-color: yellow;
+}
+
+.site-aside {
+    background-color: bisque;
 }
 
 .site-footer {
