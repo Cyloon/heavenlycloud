@@ -1,7 +1,8 @@
 
 
 :root {
-    --main-bg-color: rgb(49, 144, 217); /* var(--main-bg-color) */
+    --main-bg-color: rgb(65, 165, 241); /* var(--main-bg-color) */
+    --surr-bg-color: rgb(146, 142, 142); /* var(--surr-bg-color) */
 
 }
 
@@ -25,13 +26,13 @@ img {
   }
 
 body {
-    background-color: var(--main-bg-color);
     height: 100%;
     margin: 0 0;
     min-width: 313px;
 }
 
 .wrapper {
+    background-color: var(--surr-bg-color);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 8fr 0px 0.5fr;
@@ -47,13 +48,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-bg-color);
+    background-color: var(--surr-bg-color);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
 
 .site-nav {
-    background-color: var(--main-bg-color);
+    background-color: lightgrey;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -85,20 +86,22 @@ body {
 }
 
 iframe {
+    background-color: var(--main-bg-color);
     height: 100%;
     width: 100%;
 }
 
 .site-main {
+    height: 100%;
     background-color: var(--main-bg-color);
 }
 
 .site-aside {
-    background-color: var(--main-bg-color);
+    background-color: var(--surr-bg-color);
 }
 
 .site-footer {
-    background-color: var(--main-bg-color);
+    background-color: var(--surr-bg-color);
     text-align: center;
     padding: 1rem;
     border-top: 2px solid black;

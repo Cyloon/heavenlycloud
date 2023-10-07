@@ -10,10 +10,10 @@
 
     .site-header {
         grid-area: site-header;
-        border-bottom: 2px solid black;
     }
 
     .site-nav {
+        background-color: var(--surr-bg-color);
         grid-area: site-nav;
         border-top: 0;
         border-bottom: 0;
@@ -30,8 +30,14 @@
         border: 2px solid black;
     }
 
+    iframe {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
     .site-footer {
         grid-area: site-footer;
+        border: 0;
     }
 }
 
