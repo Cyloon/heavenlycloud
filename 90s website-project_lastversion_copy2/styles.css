@@ -93,6 +93,7 @@ body {
 
 .site-nav__item a {
   color: whitesmoke;
+  display: block;
 }
 
 iframe {
@@ -135,6 +136,12 @@ iframe {
 }
 
 .image-container__item {
+  align-items: center;
+  justify-items: center;
+}
+
+.image-container__item--span2 {
+  grid-column: span 2;
   align-items: center;
   justify-items: center;
 }
