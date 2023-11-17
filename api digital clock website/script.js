@@ -28,7 +28,7 @@ getData();
 
 
 
-
+// The rest of the code here is my project to make a digital clock by changing backgrounds in a grid
 
 
 
