@@ -1,0 +1,29 @@
+digital clock
+
+
+
+Every minute it updates and checks the numbers
+
+take the time and put it in an array?
+
+
+one draw function instead of 4
+
+
+4 divs with one grid in each that fits a number
+
+
+what is the number on the first position in the time-array?
+
+if the first numer is 1 then draw 1
+
+if the second number is 3 then draw 3
+
+if the third number is 2 then draw 2
+
+if the fourth number is 4 then draw 4
+
+everytime t
+
+
+draw = change background on div according to map
