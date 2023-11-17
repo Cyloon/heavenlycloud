@@ -1,11 +1,48 @@
 "use strict";
 
+async function getData() {
+  const url = "http://worldtimeapi.org/api/ip";
+
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+
+    const dateTime = new Date(result.datetime);
+    const timeString = dateTime.toLocaleTimeString("en-US", { hour12: false }); // Extracts time in HH:MM:SS format
+
+    let thedivEL = document.querySelector("#thediv");
+    thedivEL.textContent = "The time is : " + timeString;
+
+    console.log(result);
+    console.log(result.datetime);
+
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getData();
+
+
+
+
+
+
+
+
+
+
+
+
 function fillWhite() {
   const allCells = document.querySelectorAll(".gridItem");
   allCells.forEach((cell) => {
     cell.style.backgroundColor = "white";
   });
 }
+
+
 
 function drawZero() {
   fillWhite();
@@ -184,6 +221,27 @@ function ChecknDrawNumber(number) {
   }
 }
 
+/* // Date string from the API
+const dateString = getData();
+console.log(dateString);
+
+// Extracting time from the date string
+const dateTime = new Date(dateString);
+const timeString = dateTime.toLocaleTimeString("en-US", { hour12: false }); // Extracts time in HH:MM:SS format
+
+// Splitting hours and minutes into separate digits
+const [hour, minute] = timeString.split(":").map(Number);
+
+// Manipulating hour and minute digits to get individual digits
+const timeArray = [
+  Math.floor(hour / 10), // First digit of hour
+  hour % 10, // Second digit of hour
+  Math.floor(minute / 10), // First digit of minute
+  minute % 10, // Second digit of minute
+];
+
+console.log(timeArray); // Output: [1, 1, 2, 0]
+ */
 /* function drawNumber(number) {
   if (number === 0);
   drawZero();
