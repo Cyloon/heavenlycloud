@@ -1,12 +1,23 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 2px solid red;
+  grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+  max-width: 50rem;
 }
 
 .numbercontainer {
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: 25px 50px 50px 25px 50px 50px 25px;
-  border: 2px dashed green;
+  grid-template-columns: 2rem 2rem 2rem 2rem;
+  grid-template-rows: 1rem 3rem 3rem 1rem 3rem 3rem 1rem;
+}
+
+.dots {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 3rem;
+}
+
+.dots__dots {
+  background-color: black;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
