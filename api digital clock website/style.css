@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 2px solid red;
+}
+
+.numbercontainer {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 25px 50px 50px 25px 50px 50px 25px;
+  border: 2px dashed green;
+}

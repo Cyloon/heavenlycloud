@@ -10,6 +10,27 @@ async function getData() {
     const dateTime = new Date(result.datetime);
     const timeString = dateTime.toLocaleTimeString("en-US", { hour12: false }); // Extracts time in HH:MM:SS format
 
+    // Splitting hours and minutes into separate digits
+    const [hour, minute] = timeString.split(":").map(Number);
+
+    // Manipulating hour and minute digits to get individual digits
+    const timeArray = [
+    Math.floor(hour / 10), // First digit of hour
+    hour % 10, // Second digit of hour
+    Math.floor(minute / 10), // First digit of minute
+    minute % 10, // Second digit of minute
+    ];
+    console.log(timeArray);
+
+// for each number in timearray draw the number with position +1
+    for (let number of timeArray) {
+      let pos = timeArray.indexOf(number) + 1;
+      ChecknDrawNumber(number, pos);
+      console.log(number);
+      console.log(pos)
+      }
+                      
+    
     let thedivEL = document.querySelector("#thediv");
     thedivEL.textContent = "The time is : " + timeString;
 
@@ -44,234 +65,193 @@ function fillWhite() {
 
 
 
-function drawZero() {
+function drawZero(x) {
   fillWhite();
-  document.querySelector("#a2").style.backgroundColor = "black";
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a5").style.backgroundColor = "black";
-  document.querySelector("#a6").style.backgroundColor = "black";
-
-  document.querySelector("#b1").style.backgroundColor = "black";
-  document.querySelector("#b7").style.backgroundColor = "black";
-
-  document.querySelector("#c1").style.backgroundColor = "black";
-  document.querySelector("#c7").style.backgroundColor = "black";
-
-  document.querySelector("#d2").style.backgroundColor = "black";
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d5").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
 // Function to draw the number "1" in the grid columns
-function drawOne() {
+function drawOne(x) {
   fillWhite();
-  document.querySelector("#d2").style.backgroundColor = "black";
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d5").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d7`).style.backgroundColor = "black";
+  
 }
 
-function drawThree() {
+function drawTwo(x) {
+  fillWhite();
+  document.querySelector(`#digit${x}a5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  
+  
+}
+
+
+function drawThree(x) {
   fillWhite();
   // Set specific cells to black for number "3"
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#b5").style.backgroundColor = "black";
-  document.querySelector("#b8").style.backgroundColor = "black";
-
-  document.querySelector("#c2").style.backgroundColor = "black";
-  document.querySelector("#c5").style.backgroundColor = "black";
-  document.querySelector("#c8").style.backgroundColor = "black";
-
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
-function drawFour() {
+function drawFour(x) {
   fillWhite();
   // Set specific cells to black for number "4"
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a4").style.backgroundColor = "black";
-
-  document.querySelector("#b5").style.backgroundColor = "black";
-
-  document.querySelector("#c5").style.backgroundColor = "black";
-
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
-
-function drawFive() {
+function drawFive(x) {
   fillWhite();
   // Set specific cells to black for number "5"
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a4").style.backgroundColor = "black";
-
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#b5").style.backgroundColor = "black";
-  document.querySelector("#b8").style.backgroundColor = "black";
-
-  document.querySelector("#c2").style.backgroundColor = "black";
-  document.querySelector("#c5").style.backgroundColor = "black";
-  document.querySelector("#c8").style.backgroundColor = "black";
-
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
-function drawSix() {
+function drawSix(x) {
   fillWhite();
   // Set specific cells to black for number "6"
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a4").style.backgroundColor = "black";
-  document.querySelector("#a6").style.backgroundColor = "black";
-  document.querySelector("#a7").style.backgroundColor = "black";
-
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#b5").style.backgroundColor = "black";
-  document.querySelector("#b8").style.backgroundColor = "black";
-
-  document.querySelector("#c2").style.backgroundColor = "black";
-  document.querySelector("#c5").style.backgroundColor = "black";
-  document.querySelector("#c8").style.backgroundColor = "black";
-
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
-function drawSeven() {
+function drawSeven(x) {
   fillWhite();
   // Set specific cells to black for number "7"
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#c2").style.backgroundColor = "black";
-
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
-function drawEight() {
+function drawEight(x) {
   fillWhite();
   // Set specific cells to black for number "8"
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a4").style.backgroundColor = "black";
-  document.querySelector("#a6").style.backgroundColor = "black";
-  document.querySelector("#a7").style.backgroundColor = "black";
-
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#b5").style.backgroundColor = "black";
-  document.querySelector("#b8").style.backgroundColor = "black";
-
-  document.querySelector("#c2").style.backgroundColor = "black";
-  document.querySelector("#c5").style.backgroundColor = "black";
-  document.querySelector("#c8").style.backgroundColor = "black";
-
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  
+  
 }
 
-function drawNine() {
+function drawNine(x) {
   fillWhite();
   // Set specific cells to black for number "9"
-  document.querySelector("#a3").style.backgroundColor = "black";
-  document.querySelector("#a4").style.backgroundColor = "black";
-
-  document.querySelector("#b2").style.backgroundColor = "black";
-  document.querySelector("#b5").style.backgroundColor = "black";
-
-  document.querySelector("#c2").style.backgroundColor = "black";
-  document.querySelector("#c5").style.backgroundColor = "black";
-
-  document.querySelector("#d3").style.backgroundColor = "black";
-  document.querySelector("#d4").style.backgroundColor = "black";
-  document.querySelector("#d6").style.backgroundColor = "black";
-  document.querySelector("#d7").style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}a3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}b4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c1`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}c4`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
+  document.querySelector(`#digit${x}d7`).style.backgroundColor = "black";
+  
+  
 }
 
-function ChecknDrawNumber(number) {
+function ChecknDrawNumber(number, divpos) {
   if (number === 0) {
-    drawZero();
+    drawZero(divpos);
   } else if (number === 1) {
-    drawOne();
+    drawOne(divpos);
   } else if (number === 2) {
-    drawTwo();
+    drawTwo(divpos);
   } else if (number === 3) {
-    drawThree();
+    drawThree(divpos);
   } else if (number === 4) {
-    drawFour();
+    drawFour(divpos);
   } else if (number === 5) {
-    drawFive();
+    drawFive(divpos);
   } else if (number === 6) {
-    drawSix();
+    drawSix(divpos);
   } else if (number === 7) {
-    drawSeven();
+    drawSeven(divpos);
   } else if (number === 8) {
-    drawEight();
+    drawEight(divpos);
   } else if (number === 9) {
-    drawNine();
+    drawNine(divpos);
   }
 }
-
-/* // Date string from the API
-const dateString = getData();
-console.log(dateString);
-
-// Extracting time from the date string
-const dateTime = new Date(dateString);
-const timeString = dateTime.toLocaleTimeString("en-US", { hour12: false }); // Extracts time in HH:MM:SS format
-
-// Splitting hours and minutes into separate digits
-const [hour, minute] = timeString.split(":").map(Number);
-
-// Manipulating hour and minute digits to get individual digits
-const timeArray = [
-  Math.floor(hour / 10), // First digit of hour
-  hour % 10, // Second digit of hour
-  Math.floor(minute / 10), // First digit of minute
-  minute % 10, // Second digit of minute
-];
-
-console.log(timeArray); // Output: [1, 1, 2, 0]
- */
-/* function drawNumber(number) {
-  if (number === 0);
-  drawZero();
-} else if (number === 1) {
-    drawOne();
-}  else if (number === 2); {
-    drawTwo();
-} */
-
-/*         a1 = document.querySelector("#a1");
-        a1.style.backgroundColor = "white";
-
-        a2 = document.querySelector("#a1");
-        a2.style.backgroundColor = "white";
-
-        a3 = document.querySelector("#a1");
-        a3.style.backgroundColor = "black";
-
-        a4 = document.querySelector("#a1");
-        a4.style.backgroundColor = "black";
-
-        a5 = document.querySelector("#a1");
-        a5.style.backgroundColor = "white";
-
-        a6 = document.querySelector("#a1");
-        a6.style.backgroundColor = "black";
-
-        a7 = document.querySelector("#a1");
-        a7.style.backgroundColor = "black";
-
-
-        b1 = document.querySelector("#b1");
-        b1.style.backgroundColor = "black"; */
