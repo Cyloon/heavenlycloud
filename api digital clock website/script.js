@@ -23,11 +23,12 @@ async function getData() {
     console.log(timeArray);
 
 // for each number in timearray draw the number with position +1
+let i = 0;
     for (let number of timeArray) {
-      let pos = timeArray.indexOf(number) + 1;
-      ChecknDrawNumber(number, pos);
-      console.log(number);
-      console.log(pos)
+        if (i < timeArray.length) {
+          i++;
+        }
+        ChecknDrawNumber(number, i);
       }
                       
     
@@ -80,19 +81,16 @@ function drawZero(x) {
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
   
-  
 }
 
 // Function to draw the number "1" in the grid columns
 function drawOne(x) {
   fillWhite();
-  document.querySelector(`#digit${x}d1`).style.backgroundColor = "black";
+  
   document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
-  document.querySelector(`#digit${x}d4`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
-  document.querySelector(`#digit${x}d7`).style.backgroundColor = "black";
   
 }
 
@@ -109,9 +107,7 @@ function drawTwo(x) {
   document.querySelector(`#digit${x}d2`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
   
-  
 }
-
 
 function drawThree(x) {
   fillWhite();
@@ -127,7 +123,6 @@ function drawThree(x) {
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
   
-  
 }
 
 function drawFour(x) {
@@ -141,7 +136,6 @@ function drawFour(x) {
   document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
-  
   
 }
 function drawFive(x) {
@@ -157,7 +151,6 @@ function drawFive(x) {
   document.querySelector(`#digit${x}c7`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
-  
   
 }
 
@@ -177,7 +170,6 @@ function drawSix(x) {
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
   
-  
 }
 
 function drawSeven(x) {
@@ -189,7 +181,6 @@ function drawSeven(x) {
   document.querySelector(`#digit${x}d3`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
-  
   
 }
 
@@ -211,7 +202,6 @@ function drawEight(x) {
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
   
-  
 }
 
 function drawNine(x) {
@@ -228,7 +218,6 @@ function drawNine(x) {
   document.querySelector(`#digit${x}d5`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d6`).style.backgroundColor = "black";
   document.querySelector(`#digit${x}d7`).style.backgroundColor = "black";
-  
   
 }
 
