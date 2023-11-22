@@ -8,14 +8,16 @@
 .numbercontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1rem 1.5rem 1.5rem 1rem 1.5rem 1.5rem 1rem;
+  grid-template-rows: 0.5rem 1rem 1rem 0.5rem 1rem 1rem 0.5rem;
   padding: 0.2rem;
+  margin: auto 0;
 }
 
 .dots {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   max-width: 3rem;
+  border: 2px solid red;
 }
 
 .dots__dots {

@@ -33,7 +33,7 @@ let i = 0;
                       
     
     let thedivEL = document.querySelector("#thediv");
-    thedivEL.textContent = "The time is : " + timeString;
+    thedivEL.textContent = "The time was when you loaded this page  : " + timeString;
 
     console.log(result);
     console.log(result.datetime);
@@ -46,7 +46,9 @@ let i = 0;
 
 getData();
 
+const button = document.querySelector("#button");
 
+button.addEventListener("click", getData);
 
 
 
