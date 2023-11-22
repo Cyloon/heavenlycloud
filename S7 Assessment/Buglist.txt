@@ -1,0 +1,51 @@
+
+Line 3
+different types of quotes. ("search');
+found by looking at the code in vscode editor
+changed the quotes to the same style ""
+
+Line 4:
+Typo Selectr, its missing an o.
+found by getting an error in chrome inspector
+
+Line 3, 4, 5, 6
+all queryselectors was missing #
+added # to them so that it connects correctly to the html
+found by gettin error in inspector script.js:39 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+
+Line 17
+temp  returning alot of decimals
+put Math.round to round it off
+found it when the search was working and the temp was shown
+
+line 20   
+object within object. data - main - temp
+found by adding a console.log in the code for "data". Saw that it was an error in calling the api.
+
+line 21 
+it was having " and not backticks ´
+changed to backticks
+found by looking at code in vs code and seeing that $ was not the right color
+
+Line 28 - 37
+if states are not working correctly
+found by getting wrong messages depending on temp in the webite
+
+Line 28
+changed direction of ">" to "<"
+
+Line 30
+changed temp (temp > 0) to (temp >= 0 && temp <= 10)
+more than zero to more than or equal to zero AND below 10
+
+Line 32
+changed (temp > 10) to (temp > 10 && temp <= 20)
+more than ten to more than ten AND below 20
+
+Line 39
+there is no "function e" declared in the script..
+completed the fuction and moved it out from the addEventListener and called it the correct way.
+found by looking at the code in vc code
+
+
+
