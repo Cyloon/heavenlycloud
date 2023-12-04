@@ -1,0 +1,85 @@
+body { 
+    
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    
+    height: 100vh; 
+    background: url(background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} 
+
+#container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+#gameContainer {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+#arrowKeysContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.horizontalButtons {
+    display: flex;
+    justify-content: center; /* Center-align the buttons horizontally */
+}
+
+.arrowButton {
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#messageContainer {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    max-width: 400px;
+    margin: 10px auto;
+    max-height: none;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#gameCanvas {
+    align-items: top;
+    justify-content: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+#question {
+    margin: 5px;
+    padding: 10px 20px;
+
+}
