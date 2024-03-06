@@ -53,6 +53,7 @@ header {
 .buy_now_button button {
   width: 75%;
   height: 50%;
+  border: 2px solid black;
   border-radius: 1rem;
   background-color: pink;
   font-size: 2rem;

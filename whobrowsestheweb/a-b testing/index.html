@@ -12,7 +12,7 @@
       <section class="section_wrapper">
         <div class="product_wrapper">
           <div class="item_name">Exclusive Designer Sneakers</div>
-          <div class="item_price">2,99$</div>
+          <div class="item_price">299,99$</div>
           <div class="item_image">
             <img
               src="shoes.jpg"
@@ -20,9 +20,33 @@
               height="300px"
             />
           </div>
-          <div class="buy_now_button"><button>Buy now</button></div>
+          <div class="buy_now_button">
+            <button id="buyButton">'buttontext'</button>
+          </div>
         </div>
       </section>
     </main>
+    <script>
+      let randomnr = Math.random();
+      let buttontext;
+
+      function randombuttontext() {
+        if (randomnr < 0.5) {
+          buttontext = "Only one pair left! Buy now!";
+        } else {
+          buttontext = "Buy now";
+        }
+        document.getElementById("buyButton").textContent = buttontext;
+      }
+
+      function logbuttontext() {
+        console.log("Text that was on button when pressed:", buttontext);
+      }
+
+      randombuttontext();
+      document
+        .getElementById("buyButton")
+        .addEventListener("click", logbuttontext);
+    </script>
   </body>
 </html>
